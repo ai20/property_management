@@ -1,53 +1,78 @@
-# CakePHP Application Skeleton
 
-![Build Status](https://github.com/cakephp/app/actions/workflows/ci.yml/badge.svg?branch=5.x)
-[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
-[![PHPStan](https://img.shields.io/badge/PHPStan-level%208-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)
+# CakePHP Property Management System
 
-A skeleton for creating applications with [CakePHP](https://cakephp.org) 5.x.
+This is a simple property management system built using CakePHP. It allows users to:
+- Add, edit, and delete property listings.
+- Upload and manage property photos.
+- Search through the list of properties with a robust search feature.
+- Display property information with pagination.
 
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
+---
+
+## Features
+- **Add Property**: Create a new property entry with title, beds, baths, price, and an optional photo.
+- **Edit Property**: Modify property details, replace or delete photos.
+- **Delete Property**: Remove properties and their associated images.
+- **Search Feature**: Search by title, beds, baths, or price.
+- **Pagination**: View properties with a 5-row per page limit.
+- **File Upload**: Upload photos for properties (with file validation).
+
+---
 
 ## Installation
 
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repository-name.git
+   ```
 
-If Composer is installed globally, run
+2. Navigate to the project directory:
+   ```bash
+   cd your-repository-name
+   ```
 
-```bash
-composer create-project --prefer-dist cakephp/app
-```
+3. Install dependencies using Composer:
+   ```bash
+   composer install
+   ```
 
-In case you want to use a custom app dir name (e.g. `/myapp/`):
+4. Create and configure your database:
+   - Create a database in MySQL (or any supported DBMS).
+   - Update the `config/app_local.php` file with your database credentials.
 
-```bash
-composer create-project --prefer-dist cakephp/app myapp
-```
+5. Run migrations to set up the database schema:
+   ```bash
+   bin/cake migrations migrate
+   ```
 
-You can now either use your machine's webserver to view the default home page, or start
-up the built-in webserver with:
+6. Start the development server:
+   ```bash
+   bin/cake server
+   ```
 
-```bash
-bin/cake server -p 8765
-```
+7. Visit the app at `http://localhost:8765`.
 
-Then visit `http://localhost:8765` to see the welcome page.
+---
 
-## Update
+## Requirements
+- PHP 7.4 or higher
+- Composer
+- CakePHP 4.x
+- MySQL or any supported database
 
-Since this skeleton is a starting point for your application and various files
-would have been modified as per your needs, there isn't a way to provide
-automated upgrades, so you have to do any updates manually.
+---
 
-## Configuration
+## Usage
+1. Navigate to the `Properties` page.
+2. Add, edit, or delete properties as needed.
+3. Use the search bar to filter properties by title, beds, baths, or price.
 
-Read and edit the environment specific `config/app_local.php` and set up the
-`'Datasources'` and any other configuration relevant for your application.
-Other environment agnostic settings can be changed in `config/app.php`.
+---
 
-## Layout
+## Contributing
+Feel free to fork this repository and contribute. Pull requests are welcome!
 
-The app skeleton uses [Milligram](https://milligram.io/) (v1.3) minimalist CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
+---
+
+## License
+This project is open-source and available under the [MIT License](LICENSE).
